@@ -1,5 +1,5 @@
 server:
-   port: 8764
+   port: 8763
 
 eureka:
   client:
@@ -8,4 +8,4 @@ eureka:
       
 spring:
   application:
-    name: service-ribbon  #像注册中心注册的服务名
+    name: eureka-client  #像注册中心注册的服务名

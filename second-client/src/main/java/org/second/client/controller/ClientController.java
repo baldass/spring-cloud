@@ -1,4 +1,4 @@
-package org.eureka.client.controller;
+package org.second.client.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +12,6 @@ public class ClientController {
 
 	@RequestMapping("/hi")
 	public String home(@RequestParam(value = "name", defaultValue = "陌生人") String name) {
-		return "你好 " + name + " ,我是来自端口号:" + port;
+		return "Hello " + name + "!我的端口号是:" + port + "\r\n--来自第二个服务提供者";
 	}
 }

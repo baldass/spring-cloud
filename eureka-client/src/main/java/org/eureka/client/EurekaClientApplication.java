@@ -1,20 +1,22 @@
-package org.eureka.server;
+package org.eureka.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
- * 服务注册中心
+ * 服务提供者EurekaClient
  *
- * @EnableEurekaServer 启动服务注册中心
+ * @EnableEurekaClient 表明自己是服务提供者
  */
-@EnableEurekaServer
+@EnableEurekaClient
 @SpringBootApplication
-public class EurekaServerApplication {
+public class EurekaClientApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(EurekaServerApplication.class, args);
+		SpringApplication.run(EurekaClientApplication.class, args);
 	}
 	/*
-	 eureka是一个高可用的组件，它没有后端缓存，每一个实例注册之后需要向注册中心发送心跳（因此可以在内存中完成），
-	 在默认情况下erureka server也�
+	 * 当client向server注册时，它会提供一些元数据，例如主机和端口，URL，主页等。 Eureka server 从每个client实例接收心跳消息。
+	 * 如果心跳超时，则通常将该实例从注册server中删除。
+	 */
+}
