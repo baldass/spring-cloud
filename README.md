@@ -10,12 +10,12 @@
 	服务注册中心,用来管理服务提供者(供应商)和服务消费者(消费者)的。给消费者提供可供调用的供应商列表,消费者在进行远程服务调用时,  
 	根据供应商列表然后选择供应商的服务地址进行服务调用。	
 	2.1. 创建服务注册中心(Eureka Server)
-	>2.1.1.	右键主工程创建maven的model项目,填写相关参数(model name等)
-	>2.1.2.	按照/eureka-server/pom.xml修改新生成的注册中心项目的pom.xml文件
-	>2.1.3.	按照/eureka-server/src/main/java/org/eureka/server/EurekaServerApplication.java修改项目的启动类
-	>2.1.4.	按照/eureka-server/src/main/resources/application.yml修改配置文件
-	>2.1.5.	完成上述操作之后可以通过浏览器输入网址http://localhost:8761访问eureka server界面,里面会显示已经在这个server上注  
-	>册的服务,因为我们还没有注册任何服务所以显示的是No instances available
+	> 2.1.1. 右键主工程创建maven的model项目,填写相关参数(model name等)
+	> 2.1.2. 按照/eureka-server/pom.xml修改新生成的注册中心项目的pom.xml文件
+	> 2.1.3. 按照/eureka-server/src/main/java/org/eureka/server/EurekaServerApplication.java修改项目的启动类
+	> 2.1.4. 按照/eureka-server/src/main/resources/application.yml修改配置文件
+	> 2.1.5. 完成上述操作之后可以通过浏览器输入网址http://localhost:8761访问eureka server界面,里面会显示已经在这个server上注  
+	> 册的服务,因为我们还没有注册任何服务所以显示的是No instances available
 	2.2. 创建服务提供者(Eureka Client)
 		2.2.1.	右键主工程创建maven的model项目,填写相关参数(model name等)
 		2.2.2.	按照/eureka-client/pom.xml修改新生成的注册中心项目的pom.xml文件
