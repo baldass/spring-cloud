@@ -1,15 +1,19 @@
 server:
   port: 8761
   
-#### 通过eureka.client.registerWithEureka: false和和fetchRegistry: false来表明自己是一个eureka server.
+#### eureka.instance.hostname: 服务注册中心实例的主机名
+#### eureka.client.register-with-eureka: 是否向服务注册中心注册自己
+#### eureka.client.fetch-registry: 是否检索服务
+#### 通过eureka.client.register-with-eureka: false和fetch-registry: false来表明自己是一个eureka server.
+#### eureka.client.service-url.default-zone: 服务注册中心的配置内容，指定服务注册中心的位置
 eureka:
   instance:
     hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
       
 spring:
   application:
